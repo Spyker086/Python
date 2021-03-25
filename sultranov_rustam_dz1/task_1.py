@@ -1,7 +1,9 @@
 
-duration = 123123
-print("Секунды = " + str(duration))
+duration = int(input("Введите ко-во секунд: "))
+# print("Секунды = " + str(duration))
 
+if duration < 60:
+    print("sec:" + str(duration % 60))
 if duration < 3600:
     print("min:" + str(duration // 60) + " sec:" + str(duration % 60))
 elif 3600 <= duration < 86400:
