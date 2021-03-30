@@ -1,3 +1,4 @@
+import sys
 import xml.etree.ElementTree as ET
 import urllib.request
 from decimal import Decimal
@@ -26,5 +27,5 @@ def currency_rates(currency):
         print('!!!Нет такой валюты!!!')
 
 
-currency = input('Ведите валюту: ')
-currency_rates(currency.lower())
+# currency = input('Ведите валюту: ')
+currency_rates(sys.argv[1])

@@ -4,6 +4,9 @@ from decimal import Decimal
 
 
 def currency_rates(currency):
+
+
+
     tree = ET.parse(urllib.request.urlopen('http://www.cbr.ru/scripts/XML_daily.asp'))
     root = tree.getroot()
 
@@ -24,7 +27,6 @@ def currency_rates(currency):
         print(f'Текущий курс: {p.quantize(Decimal("1.0000"))} руб')
     else:
         print('!!!Нет такой валюты!!!')
-
 
 currency = input('Ведите валюту: ')
 currency_rates(currency.lower())
