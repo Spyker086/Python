@@ -5,6 +5,7 @@ def email_parse(email):
     keys = ['username', 'domain']
     # try:
     pattern = r'\w+[@]\w+[.]\w+'
+    # pattern = r'[^@]'
     email_re = re.compile(pattern)
     if email_re.findall(email):
         pattern2 = r'@'
@@ -14,4 +15,4 @@ def email_parse(email):
         print("Error: invalid email")
 
 
-email_parse('spycer@yandex.ru')
+email_parse('spycer@yan*dex.ru')
