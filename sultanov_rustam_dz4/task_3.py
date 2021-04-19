@@ -4,9 +4,6 @@ from decimal import Decimal
 
 
 def currency_rates(currency):
-
-
-
     tree = ET.parse(urllib.request.urlopen('http://www.cbr.ru/scripts/XML_daily.asp'))
     root = tree.getroot()
 
